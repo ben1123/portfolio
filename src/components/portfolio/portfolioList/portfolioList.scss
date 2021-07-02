@@ -1,0 +1,18 @@
+@import '../../../global.scss';
+ 
+.list {
+    
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s ease;
+    &:hover {
+        background: rgba(119, 119, 167, 0.233) ;
+
+    }
+    
+    &.selected{
+        background: $main-color ;
+        color: white;
+    }
+}

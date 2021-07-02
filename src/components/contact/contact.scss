@@ -1,0 +1,134 @@
+@import '../../global.scss';
+
+.contact {
+    background: #ebebeb;
+    position: relative;
+    width: 100%;
+
+   
+   
+    h1 {
+        
+    position: absolute;
+    right: 5rem;
+    display: flex;
+    flex-direction: column;
+    top: 3rem;
+    font-size: 40px;
+    width: 40%;
+        text-align: center;
+        z-index: 2;
+        
+    }
+
+    .contact-form {
+        padding: 1rem 8px;
+        position: absolute;
+        right: 5rem;
+        display: flex;
+        flex-direction: column;
+        top: 8rem;
+        width: 40%;
+        align-items: center;
+        background: #ffffff7c;
+        border-radius: 10px;
+
+        @include mobile {
+            
+        width: 90%;
+           position: absolute;
+           right: 1rem;
+            margin: auto auto;
+            z-index: 10;
+         top: 15rem;
+            
+        }
+
+        
+
+
+        .address {
+            box-sizing: border-box;
+            font:inherit;
+            padding: 5px;
+            margin-bottom: .5rem;
+            width:  95%;;
+            max-width: 95%;
+            border-radius: 8px;
+            outline: none;
+            border: solid 1px #1b60f5;
+            &:focus {
+                box-shadow: 0 0 4px  #1b60f5 ;
+                
+            }
+        }
+
+        .message {
+            width: 100%;
+            font:inherit;
+            border-radius: 8px;
+            box-sizing: border-box;
+            max-width: 95%;
+            min-width: 95%;
+            max-height: 18rem;
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 3px  #1348bb ;
+            }
+            
+        }
+
+        .submit-button {
+            margin-top:  2rem;
+            padding: 5px 8px;
+            border-radius: 8px;
+            outline: none;
+            font:inherit;
+            font-weight: 500;
+            color: white;
+            background: #5583e7;
+            border: 1px solid white;
+            cursor: pointer;
+            transition: all .3 ease;
+            &:hover {
+                opacity: .9;
+            }
+
+            &:active {
+                color: #5583e7;
+            background: white;
+            }
+
+        }
+
+        .thank {
+            margin-top: 1rem;
+            font-weight: 300;
+            color: rgb(97, 145, 235);
+        }
+        
+
+       
+
+    }
+
+    .contact-banner {
+        height: 100%;
+        overflow: hidden;
+
+        
+        img{
+            
+            height: 90%;
+        }
+
+        @include mobile {
+           height: 40%;
+           position:  absolute;
+           margin: auto;
+           margin-top: 2rem;
+           
+           
+        }
+    }
+}

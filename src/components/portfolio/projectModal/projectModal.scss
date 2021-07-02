@@ -1,0 +1,147 @@
+@import '../../../global.scss';
+
+.project-modal {
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    height: 80%;
+    width: 70%;
+    top: 5rem;
+    z-index: 100;
+    border-radius: 10px;
+    display: flex;
+    user-select: none;
+    transition: all .5s ease;
+    
+
+    .project-title {
+        text-align: center;
+        margin-top: 1rem;
+        color: white;
+    }
+
+    .cancel-button {
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        font-size: 2rem;
+        opacity: .3;
+        transition: all .5s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: .9;
+        }
+    }
+
+    .project-left {
+        flex: 6;
+        
+            height: 100%;
+
+
+
+            .section-label {
+                color: #ffffff;
+                list-style-type: disc;
+                list-style-position: inside;
+                display: list-item;
+                padding: 0;
+                margin: 0;
+            }
+        .project-description {
+            
+            margin: 0;
+            margin: 2rem;
+            padding: 1rem;
+            text-align: justify;
+            color: #ffff;
+            background: black;
+            border: 1px solid rgb(189, 189, 226);
+            border-radius: 10px;
+            font-size: .9rem;
+            font-weight: 300;
+            user-select: none;
+            cursor: none;
+
+            &:hover {
+                box-shadow: 0 0 5px #9898ff;
+            }
+
+        }
+
+        .project-technologies {
+            margin-left: 2rem;
+            ul {
+                margin-top: 1rem;
+                li {
+                    background: rgb(122, 187, 187);
+                    padding: 4px;
+                    border-radius: 8px;
+                    font-size: .8rem;
+                    font-weight: 500;
+                    color: white ;
+                    
+                }
+            }
+        }
+
+        .project-view {
+            margin-top: 2rem;
+            margin-left: 2rem;
+
+            div {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                margin: 1rem 0;
+                &:hover {
+                    text-shadow: 0 0 3px whitesmoke;
+                    .icon {
+                        color: #6c89b8;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: #bdb7b7;
+                    margin-left: 1rem;
+                    font-size: .8rem;
+                    font-weight: 300;
+
+                }
+
+                .icon {
+                    color: #295fb6;
+                }
+            }
+        }
+    }
+    .project-right {
+        flex: 5;
+        height: 100%;
+        justify-items: center;
+        display: flex;
+        overflow: hidden;
+
+        .project-banner {
+            overflow: hidden;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include mobile {
+        .project-right {
+            display: none;
+        }
+
+        width: 95%;
+
+        .cancel-button  {
+            color: white;
+        }
+    }
+}

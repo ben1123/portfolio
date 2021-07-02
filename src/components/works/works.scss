@@ -1,0 +1,202 @@
+@import '../../global.scss';
+
+
+.works {
+  background: #039eff;
+  position: relative;
+  display: flex;
+  
+  
+  h1 {
+    margin-top: 30px;
+    font-size: 50px;
+    justify-self: center;
+    margin: 20px auto;
+  }
+
+  .slider {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    height: 70%;
+    bottom: 50px;
+    // left: 100px;
+
+    @include mobile {
+      flex-direction:  column;
+      height: 80%;
+    }
+
+    .container {
+      display: flex;
+      flex: .5;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+      
+      .wrapper {
+        background: honeydew;
+        width: 60%;
+        height: 100%;
+        border-radius: 15px;
+        display: flex;
+
+        @include mobile {
+          width: 80vw;
+          
+        }
+        
+        .left {
+          background: #99d7fd;
+          flex: 4;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          @include mobile {
+            align-items: center;
+            justify-content: flex-start ;
+              padding-top: 2rem;
+          }
+  
+          .left-container {
+            display: flex;
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            background: coral;
+            padding: 5px;
+            margin-top: 40px;
+            border-radius: 50%;
+
+            @include mobile {
+              width: 2.5rem;
+              height: 2.5rem;
+              margin-top: 0;
+              padding: 8px;
+              position: relative;
+              
+              img {
+                width: 100%;
+                object-fit: cover;
+                position: relative;
+              }
+            }
+          }
+  
+          h1 {
+            font-size: 18px;
+            margin-left: 10px;
+
+            @include mobile {
+              font-size: 14px;
+              margin: 0;
+              text-align: center;
+            }
+          }
+  
+          p {
+            font-size: 14px;
+            margin: 10px;
+            text-align: left;
+            @include mobile {
+               display: none;
+              
+            }
+          }
+  
+          .projects-link {
+            font-size: 12px;
+            font-weight: 600;
+            margin: 20px 10px;
+            text-decoration-line: underline;
+            cursor: pointer;
+             @include mobile {
+               margin: 0 ;
+               text-align: center;
+               font-size: 12px;
+             }
+  
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+  
+        .right {
+          flex: 7;
+          background: white;
+  
+          .banner {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            img {
+              position: absolute;
+              display: block;
+              width: 100%;
+              height: auto;
+              margin: 10px;
+              transform: rotate(9deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    z-index: 2;
+   @include mobile {
+     display: none;
+   }
+    &-left {
+      height: 50px;
+      left: 20px;
+      position: absolute;
+      bottom: 40%;
+      left: 10%;
+      transform: rotate(90deg);
+      transition: 0.5s ease-in-out;
+
+      border-radius: 50%;
+      padding: 5px;
+      &:hover {
+        left: 9.5%;
+      }
+      &:active {
+        background: #ffffff7c;
+      }
+    }
+
+    &-right {
+      height: 50px;
+      right: 20px;
+      position: absolute;
+      bottom: 40%;
+      right: 10%;
+      transform: rotate(-90deg);
+      border-radius: 50%;
+      padding: 5px;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        right: 9.5%;
+      }
+      &:active {
+        background: #ffffff7c;
+      }
+    }
+  }
+}

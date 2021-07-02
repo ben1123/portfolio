@@ -1,0 +1,160 @@
+@import '../../global.scss';
+
+.intro {
+  background: #ffffff;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100wv;
+  }
+
+  
+  .left {
+    flex: 0.5;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+
+    @include mobile {
+      flex: 0.7
+    }
+
+    
+    .image-wrapper {
+      background: rgb(240, 47, 89);
+      border-radius: 50%;
+      height: 700px;
+      width: 700px;
+      float: right;
+      position: relative;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    img {
+      width:50rem;
+      position: absolute;
+       top: 40px;
+    
+      // left: 2rem;
+
+      @include mobile {
+        width: 85%;
+        justify-content: flex-start;
+        position: relative;
+        bottom: 0;
+        
+        
+      }
+      
+    }
+   
+  }
+  .right {
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+
+      position: relative;
+
+      @include mobile {
+
+        width: 100%;
+        margin-right: 2rem;
+        margin-top: 2rem;
+      }
+      .intro-wrapper {
+          display: flex;
+          flex-direction: column;
+          
+              margin-left: 50px;
+          .intro-name {
+              display: flex;
+              flex-direction: column;
+              
+              h1 {
+                  font-size: 50px;
+                  font-weight: 800;
+              } 
+
+              h2 {
+                    font-size: 30px;
+                    font-weight: 800;
+              }
+
+              @include mobile {
+                align-content: flex-start;
+                display: block;
+                width: 100%;
+                h1 {
+                  font-size: 2rem;
+                }
+
+                h2{
+                  font-size: 1.5rem;
+                }
+
+                h3 {
+                  text-align: left;
+                }
+              }
+          }
+
+          h3 {
+              font-size: 25px;
+              font-weight: 500;
+              span{
+                color: crimson
+              }
+
+              .ityped-cursor {
+                animation: blink 1s infinite;
+              }
+      
+              @keyframes blink {
+                  50%{
+                      opacity: 1;
+                  }
+                  100%{
+                      opacity: 0;
+                  }
+              }
+              
+
+          }
+      }
+
+      .arrow {
+          position: absolute;
+          bottom: 20px;
+          left: 40%;
+          width: 80px;
+            height: 80px;
+            @include mobile {
+              left: 50%;
+              bottom: 2rem;
+            }
+
+          img {
+            width: 50px;
+            height: 50px;
+            animation: arrowBlink  2s infinite ease-in-out ;
+          }
+
+          @keyframes arrowBlink {
+            100% {
+              opacity: 0;
+              padding-top:  20px;
+              transform: translateY(10px)
+            }
+          }
+          
+      }
+
+  }
+}
